@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哑剧猫-热门哑剧猫咪表情包与趣味视频合集</title>
+    <meta name="description" content="哑剧猫是网络上走红的猫咪表情包与短视频形象，这里汇集哑剧猫表情包合集、经典片段、趣味解读与热门推荐，带您了解这只不会喵喵叫却演技爆棚的小猫。">
+    <meta name="keywords" content="哑剧猫,哑剧猫表情包,哑剧猫视频,哑剧猫咪,哑剧猫合集,网络热门猫咪">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, Arial, sans-serif; background-color: #faf7f2; color: #3b2f2f; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* ===== Header 头部 ===== */
+        .site-header { background: #fff8ef; border-bottom: 3px solid #f0a06a; padding: 18px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; }
+        .logo-icon { width: 48px; height: 48px; background: #e58f4f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: #fff; box-shadow: 0 4px 8px rgba(229,143,79,0.3); }
+        .logo-text h1 { font-size: 26px; font-weight: 800; color: #d2691e; letter-spacing: 1px; }
+        .logo-text p { font-size: 13px; color: #8a7a6a; margin-top: 2px; }
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a { font-weight: 600; color: #5d4a3a; padding: 6px 2px; border-bottom: 2px solid transparent; transition: 0.2s; font-size: 16px; }
+        .nav-links a:hover { color: #d2691e; border-bottom-color: #f0a06a; }
+        @media (max-width: 768px) { .nav-links { display: none; } }
+
+        /* ===== Hero 首屏 ===== */
+        .hero { background: linear-gradient(135deg, #fce5d7 0%, #f9d0b4 100%); padding: 50px 0 60px; text-align: center; border-bottom: 1px solid #f4d5bd; }
+        .hero h2 { font-size: 36px; font-weight: 800; color: #a14b16; margin-bottom: 12px; }
+        .hero .subhead { font-size: 18px; max-width: 700px; margin: 0 auto 30px; color: #6b4f3a; }
+        .hero-features { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 10px; }
+        .feature-chip { background: #fff; border-radius: 50px; padding: 10px 22px; font-weight: 600; color: #a14b16; box-shadow: 0 4px 12px rgba(160,80,20,0.12); font-size: 15px; display: flex; align-items: center; gap: 8px; }
+        .feature-chip span { font-size: 20px; }
+
+        /* ===== 内容区通用 ===== */
+        .section { padding: 45px 0; }
+        .section-title { font-size: 28px; font-weight: 800; color: #3b2f2f; margin-bottom: 8px; position: relative; display: inline-block; }
+        .section-title::after { content: ''; display: block; width: 60%; height: 4px; background: #f0a06a; border-radius: 4px; margin-top: 6px; }
+        .section-sub { color: #7c6a5a; margin-bottom: 30px; font-size: 15px; }
+
+        /* ===== 表情包卡片区 ===== */
+        .meme-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; }
+        .meme-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.06); transition: transform 0.25s, box-shadow 0.25s; }
+        .meme-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+        .meme-thumb { background: #f3e2d3; height: 180px; display: flex; align-items: center; justify-content: center; font-size: 72px; }
+        .meme-info { padding: 16px; }
+        .meme-info h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; color: #4a362a; }
+        .meme-info p { font-size: 13px; color: #8c7b6b; margin-bottom: 10px; }
+        .tag-row { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tag { background: #fceee2; color: #b05d1e; padding: 3px 10px; border-radius: 30px; font-size: 12px; font-weight: 600; }
+
+        /* ===== 热门视频排行 ===== */
+        .video-list { display: flex; flex-direction: column; gap: 16px; }
+        .video-item { display: flex; align-items: center; background: #fff; border-radius: 14px; padding: 14px 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); gap: 18px; }
+        .video-rank { font-size: 24px; font-weight: 800; color: #f0a06a; width: 45px; text-align: center; }
+        .video-info { flex: 1; }
+        .video-info h3 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+        .video-info p { font-size: 13px; color: #8c7b6b; }
+        .video-play { background: #fceee2; padding: 8px 16px; border-radius: 30px; color: #b05d1e; font-weight: 600; font-size: 14px; }
+
+        /* ===== 双栏（亮点/解读） ===== */
+        .dual-column { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        @media (max-width: 768px) { .dual-column { grid-template-columns: 1fr; } }
+        .info-box { background: #fff; border-radius: 18px; padding: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+        .info-box h3 { font-size: 20px; color: #a14b16; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .info-box ul { list-style: none; }
+        .info-box li { padding: 8px 0; border-bottom: 1px dashed #eee0d3; font-size: 15px; display: flex; gap: 10px; }
+        .info-box li::before { content: "🐾"; margin-right: 6px; }
+        .info-box p { font-size: 15px; margin-bottom: 10px; }
+
+        /* ===== 趣味故事/背景 ===== */
+        .story-section { background: #fff4ea; border-radius: 20px; padding: 35px; margin-top: 20px; }
+        .story-section h3 { font-size: 22px; color: #a14b16; margin-bottom: 15px; }
+        .story-section p { font-size: 15px; margin-bottom: 15px; color: #5d4a3a; }
+
+        /* ===== FAQ 常见问题 ===== */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: #fff; border-radius: 12px; margin-bottom: 12px; padding: 20px 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+        .faq-question { font-weight: 700; font-size: 17px; color: #4a362a; margin-bottom: 8px; display: flex; gap: 10px; }
+        .faq-question::before { content: "Q"; background: #f0a06a; color: #fff; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+        .faq-answer { font-size: 15px; color: #6b5a4a; padding-left: 36px; }
+
+        /* ===== CTA 底部引导 ===== */
+        .cta-box { background: linear-gradient(120deg, #f7d4b8, #f0a06a); border-radius: 20px; padding: 40px; text-align: center; margin: 30px 0 0; }
+        .cta-box h3 { font-size: 24px; color: #fff; margin-bottom: 12px; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .cta-box p { color: #fffaf5; margin-bottom: 20px; font-size: 16px; }
+
+        /* ===== Footer ===== */
+        .site-footer { background: #3b2f2f; color: #ddd0c4; padding: 30px 0; margin-top: 50px; text-align: center; font-size: 14px; }
+        .site-footer a { color: #f0a06a; }
+        .footer-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 12px; flex-wrap: wrap; }
+        .footer-links a { color: #cfb8a8; }
+        .footer-links a:hover { color: #f0a06a; }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 26px; }
+            .section { padding: 30px 0; }
+            .section-title { font-size: 22px; }
+            .meme-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            .meme-thumb { height: 120px; font-size: 50px; }
+            .video-item { flex-wrap: wrap; padding: 12px; }
+            .video-rank { width: 30px; font-size: 20px; }
+            .cta-box { padding: 25px; }
+            .story-section { padding: 22px; }
+        }
+        @media (max-width: 480px) {
+            .meme-grid { grid-template-columns: 1fr; }
+            .hero-features { gap: 12px; }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">🐱</div>
+                <div class="logo-text">
+                    <h1>哑剧猫</h1>
+                    <p>不会喵喵叫的演技派</p>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hot">热门表情</a></li>
+                    <li><a href="#videos">视频排行</a></li>
+                    <li><a href="#story">猫咪故事</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container">
+            <h2>哑剧猫 · 无声的爆笑魅力</h2>
+            <p class="subhead">一只不会出声却浑身是戏的小猫，凭借夸张表情和肢体语言成为全网热门表情包与短视频新星。这里为你整理最全的哑剧猫合集。</p>
+            <div class="hero-features">
+                <div class="feature-chip"><span>🎭</span> 表情包 100+</div>
+                <div class="feature-chip"><span>🎬</span> 经典片段</div>
+                <div class="feature-chip"><span>🔥</span> 持续更新</div>
+                <div class="feature-chip"><span>💬</span> 网友热评</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新表情包区 -->
+    <section class="section" id="hot">
+        <div class="container">
+            <h2 class="section-title">热门哑剧猫表情包</h2>
+            <p class="section-sub">表情包是哑剧猫走红的起点，每一张都充满戏剧张力。</p>
+            <div class="meme-grid">
+                <div class="meme-card">
+                    <div class="meme-thumb">😼</div>
+                    <div class="meme-info">
+                        <h3>震惊！猫猫瞳孔地震</h3>
+                        <p>夸张瞪眼 + 嘴巴微张，完美演绎“我听到了什么”</p>
+                        <div class="tag-row"><span class="tag">惊讶</span><span class="tag">夸张</span></div>
+                    </div>
+                </div>
+                <div class="meme-card">
+                    <div class="meme-thumb">🙀</div>
+                    <div class="meme-info">
+                        <h3>生无可恋猫</h3>
+                        <p>瘫软无力的表情配合空洞眼神，打工人周一真实写照</p>
+                        <div class="tag-row"><span class="tag">颓废</span><span class="tag">共鸣</span></div>
+                    </div>
+                </div>
+                <div class="meme-card">
+                    <div class="meme-thumb">😾</div>
+                    <div class="meme-info">
+                        <h3>鄙视你猫</h3>
+                        <p>斜眼 + 嘴角下撇，无声胜有声的嫌弃</p>
+                        <div class="tag-row"><span class="tag">高冷</span><span class="tag">嫌弃</span></div>
+                    </div>
+                </div>
+                <div class="meme-card">
+                    <div class="meme-thumb">😿</div>
+                    <div class="meme-info">
+                        <h3>委屈巴巴猫</h3>
+                        <p>泪眼汪汪却倔强不哭，让人瞬间心软</p>
+                        <div class="tag-row"><span class="tag">委屈</span><span class="tag">可爱</span></div>
+                    </div>
+                </div>
+                <div class="meme-card">
+                    <div class="meme-thumb">🤨</div>
+                    <div class="meme-info">
+                        <h3>你不对劲猫</h3>
+                        <p>半眯眼睛上下打量，怀疑中带着一丝调侃</p>
+                        <div class="tag-row"><span class="tag">怀疑</span><span class="tag">侦探</span></div>
+                    </div>
+                </div>
+                <div class="meme-card">
+                    <div class="meme-thumb">😎</div>
+                    <div class="meme-info">
+                        <h3>胜券在握猫</h3>
+                        <p>嘴角上扬一脸自信，仿佛一切尽在掌握</p>
+                        <div class="tag-row"><span class="tag">得意</span><span class="tag">霸气</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门视频片段排行 -->
+    <section class="section" id="videos" style="background:#f6efe7; padding:45px 0;">
+        <div class="container">
+            <h2 class="section-title">哑剧猫经典视频片段</h2>
+            <p class="section-sub">从短视频平台火出圈的名场面，按人气整理。</p>
+            <div class="video-list">
+                <div class="video-item">
+                    <div class="video-rank">1</div>
+                    <div class="video-info">
+                        <h3>哑剧猫的“无声咆哮”</h3>
+                        <p>猫咪张大嘴却发不出声音，配上夸张动作，全网模仿挑战</p>
+                    </div>
+                    <div class="video-play">▶ 热门片段</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-rank">2</div>
+                    <div class="video-info">
+                        <h3>猫猫碰瓷名场面</h3>
+                        <p>主人一靠近就倒地抽搐，表情痛苦又搞笑，演技满分</p>
+                    </div>
+                    <div class="video-play">▶ 热门片段</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-rank">3</div>
+                    <div class="video-info">
+                        <h3>哑剧猫 vs 镜子里的自己</h3>
+                        <p>对着镜子做出各种夸张表情，仿佛在演一出默剧</p>
+                    </div>
+                    <div class="video-play">▶ 热门片段</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-rank">4</div>
+                    <div class="video-info">
+                        <h3>被黄瓜吓到的哑剧猫</h3>
+                        <p>经典黄瓜恐惧症，但哑剧猫的反应格外有层次感</p>
+                    </div>
+                    <div class="video-play">▶ 热门片段</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-rank">5</div>
+                    <div class="video-info">
+                        <h3>讨零食的哑剧猫</h3>
+                        <p>用眼神和爪子表演一出默剧，不开口却让人无法拒绝</p>
+                    </div>
+                    <div class="video-play">▶ 热门片段</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 双栏：亮点 + 使用场景 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">为什么哑剧猫如此受欢迎</h2>
+            <p class="section-sub">从表情包到短视频，哑剧猫的走红并非偶然。</p>
+            <div class="dual-column">
+                <div class="info-box">
+                    <h3>🐈 哑剧猫的独特魅力</h3>
+                    <ul>
+                        <li>无声表演反而突破了语言障碍，任何地区的人都能看懂</li>
+                        <li>猫咪表情天生丰富，加上戏剧化的动作，极具喜剧效果</li>
+                        <li>与默剧艺术有异曲同工之妙，被称为“猫界卓别林”</li>
+                        <li>表情包适用性极强，从日常吐槽到职场自嘲都能用</li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <h3>💡 表情包使用场景</h3>
+                    <ul>
+                        <li>聊天时表达震惊、无语、委屈等情绪</li>
+                        <li>朋友圈配图，让文字更有画面感</li>
+                        <li>工作群里的委婉吐槽与幽默回应</li>
+                        <li>短视频创作中的素材与灵感来源</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 哑剧猫的故事背景 -->
+    <section class="section" id="story">
+        <div class="container">
+            <div class="story-section">
+                <h3>🎬 哑剧猫的走红之路</h3>
+                <p>哑剧猫最初出现在短视频平台时，并没有立刻走红。它和普通猫咪一样，喜欢安静地坐在窗边发呆。直到某一天，主人发现这只猫在表达情绪时从不发出声音，而是用丰富的面部表情和肢体动作来“说话”——这种独特的沟通方式被记录下来后，迅速引发了网友的关注。</p>
+                <p>有网友评论说，哑剧猫就像一位天生的默剧演员，它懂得用眼神传递情绪，用尾巴表达态度。无论是想要零食时的渴望眼神，还是被冷落时的委屈表情，都让人忍不住截图做成表情包。随着越来越多人开始分享哑剧猫的片段，它逐渐成为网络文化中的一个特殊符号。</p>
+                <p>如今，哑剧猫不仅是表情包界的“顶流”，也启发了不少创作者尝试用无声的方式表达幽默。它让我们重新发现，有时候最打动人的表达，恰恰是那些不需要声音的瞬间。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title" style="display:block; text-align:center;">关于哑剧猫的常见问题</h2>
+            <p class="section-sub" style="text-align:center;">你可能想了解这些</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">哑剧猫是真的不会叫吗？</div>
+                    <div class="faq-answer">哑剧猫并不是生理上无法发声，而是它的性格比较安静，很少用叫声表达需求。主人拍摄时捕捉到的都是它用表情和动作沟通的画面，久而久之“哑剧”这个标签就流传开了。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">在哪里可以找到更多哑剧猫的表情包？</div>
+                    <div class="faq-answer">在微信表情商店、主流输入法表情包库以及各大图片分享平台搜索“哑剧猫”都能找到网友制作的合集。短视频平台也有大量视频素材可供截取。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">哑剧猫是什么品种的猫？</div>
+                    <div class="faq-answer">从外观特征来看，哑剧猫是一只典型的中华田园猫（狸花猫类），这也是它亲和力强、表情丰富的原因之一。不过具体血统并没有官方说明。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何用哑剧猫的表情包制作自己的视频？</div>
+                    <div class="faq-answer">可以使用剪映、必剪等免费剪辑工具，将哑剧猫的片段配上字幕或BGM，加上夸张的贴纸效果，模仿默剧风格进行二次创作。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 区域 -->
+    <section class="section" style="padding-top:10px;">
+        <div class="container">
+            <div class="cta-box">
+                <h3>🐾 和更多猫友一起分享哑剧猫的快乐</h3>
+                <p>如果你也有哑剧猫的有趣表情或视频，欢迎分享给更多喜欢它的朋友～</p>
+                <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                    <span style="background:#fff; color:#a14b16; padding:10px 24px; border-radius:30px; font-weight:700; display:inline-block;">#哑剧猫</span>
+                    <span style="background:#fff; color:#a14b16; padding:10px 24px; border-radius:30px; font-weight:700; display:inline-block;">#无声的演技派</span>
+                    <span style="background:#fff; color:#a14b16; padding:10px 24px; border-radius:30px; font-weight:700; display:inline-block;">#猫界卓别林</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#hot">表情包合集</a>
+                <a href="#videos">视频排行</a>
+                <a href="#story">猫咪故事</a>
+                <a href="#faq">常见问题</a>
+            </div>
+            <p>© 2024 哑剧猫爱好者小站 · 分享快乐与猫猫的魅力</p>
+            <p style="margin-top:6px; font-size:13px; color:#a99a8a;">本站为个人爱好者整理，图片素材来源于网络分享，仅用于交流学习。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
