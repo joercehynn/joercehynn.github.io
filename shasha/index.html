@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>傻傻的海龟-憨萌海龟图鉴与趣味科普之家</title>
+    <meta name="description" content="傻傻的海龟是专注海龟科普与萌趣图鉴的网站。这里有海龟种类介绍、生活习性、保护现状、趣味行为观察及常见疑问解答，带你了解这些看似呆萌实则坚韧的海洋精灵。">
+    <meta name="keywords" content="傻傻的海龟,海龟,海龟科普,海龟种类,海龟保护,绿海龟,玳瑁,蠵龟,棱皮龟,海龟图鉴,海洋生物">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #e9f7f5;
+            color: #1e3d3b;
+            line-height: 1.7;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(175deg, #127c7a 0%, #1b9e9b 60%, #5fc6c0 100%);
+            padding: 20px 0 10px;
+            box-shadow: 0 6px 18px rgba(18, 124, 122, 0.2);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            font-size: 2.4rem;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+        }
+        .logo h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-shadow: 2px 3px 6px rgba(0, 70, 60, 0.3);
+        }
+        .logo span {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #c1f0ee;
+            letter-spacing: 4px;
+        }
+        .header-motto {
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(4px);
+            padding: 6px 18px;
+            border-radius: 40px;
+            color: #f4ffff;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        nav {
+            margin-top: 20px;
+            background: rgba(5, 78, 76, 0.6);
+            border-radius: 60px;
+            padding: 6px 10px;
+            backdrop-filter: blur(6px);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+        nav a {
+            display: block;
+            padding: 8px 20px;
+            color: #dff8f7;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 40px;
+            transition: all 0.25s;
+        }
+        nav a:hover {
+            background: #ffffff;
+            color: #0b6f6c;
+        }
+        .hero {
+            background: radial-gradient(circle at 20% 20%, #a9e6e2 0%, #e0f6f2 100%);
+            padding: 40px 0 50px;
+            border-bottom: 3px solid #9bd8d2;
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 30px;
+            align-items: center;
+        }
+        .hero-text h2 {
+            font-size: 2.3rem;
+            color: #0b5e5b;
+            margin-bottom: 15px;
+            font-weight: 900;
+            line-height: 1.3;
+        }
+        .hero-text h2 em {
+            font-style: normal;
+            color: #d47a2f;
+            border-bottom: 4px dotted #f0b37e;
+        }
+        .hero-text p {
+            font-size: 1.15rem;
+            color: #1e4f4d;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        .hero-emoji {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .hero-emoji span {
+            background: white;
+            border-radius: 50px;
+            padding: 6px 18px;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #b5ded9;
+        }
+        .hero-img {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="%23c4ede8"/><path d="M55,130 Q55,70 100,70 Q145,70 145,130 Q145,160 100,160 Q55,160 55,130" fill="%2346a59c"/><circle cx="80" cy="110" r="8" fill="%231e3d3b"/><circle cx="120" cy="110" r="8" fill="%231e3d3b"/><path d="M80,135 Q100,150 120,135" stroke="%231e3d3b" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M30,120 Q20,100 30,90 Q40,80 45,100" fill="%236abf5e"/><path d="M170,120 Q180,100 170,90 Q160,80 155,100" fill="%236abf5e"/></svg>') no-repeat center center;
+            background-size: contain;
+            min-height: 200px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .hero-img:hover {
+            transform: rotate(4deg) scale(1.02);
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0c5a58;
+            border-left: 8px solid #f2a65a;
+            padding-left: 18px;
+            margin: 30px 0 20px;
+            letter-spacing: 1px;
+        }
+        .section-sub {
+            color: #2f6b69;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 18px 18px 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #c9e2de;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 28px rgba(0, 60, 60, 0.15);
+        }
+        .card-emoji {
+            font-size: 2.8rem;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            color: #155e59;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .card p {
+            font-size: 0.98rem;
+            color: #366b67;
+            flex: 1;
+        }
+        .tag {
+            display: inline-block;
+            background: #e2f3f0;
+            padding: 4px 12px;
+            border-radius: 30px;
+            color: #0d6d66;
+            font-size: 0.8rem;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+        .behaviour-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            background: #f5fcfb;
+            padding: 30px 20px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+        }
+        .behaviour-item {
+            text-align: center;
+            padding: 10px;
+        }
+        .behaviour-item .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .behaviour-item h3 {
+            color: #155e59;
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+        .behaviour-item p {
+            font-size: 0.9rem;
+            color: #2f6b69;
+        }
+        .protect-box {
+            background: #0d5c5a;
+            color: #eafaf8;
+            padding: 28px 25px;
+            border-radius: 26px;
+            margin-bottom: 40px;
+        }
+        .protect-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #ffe3b0;
+        }
+        .protect-box ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        .protect-box li {
+            margin-bottom: 8px;
+        }
+        .faq-list {
+            margin-bottom: 40px;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            border-left: 6px solid #45a59c;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+        }
+        .faq-item h3 {
+            font-size: 1.2rem;
+            color: #0b5e5b;
+            margin-bottom: 6px;
+            display: flex;
+            gap: 8px;
+        }
+        .faq-item h3::before {
+            content: "❓";
+        }
+        .faq-item p {
+            color: #2e5b57;
+            margin-top: 6px;
+            padding-left: 24px;
+        }
+        .big-emoji-line {
+            text-align: center;
+            font-size: 3rem;
+            letter-spacing: 15px;
+            margin: 15px 0;
+            opacity: 0.8;
+        }
+        footer {
+            background: #0e4442;
+            color: #b4ded9;
+            padding: 30px 0 20px;
+            margin-top: 40px;
+            border-top: 5px solid #f2a65a;
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .footer-about {
+            flex: 2;
+            min-width: 240px;
+        }
+        .footer-links {
+            flex: 1;
+            min-width: 140px;
+        }
+        footer h4 {
+            font-size: 1.2rem;
+            color: #ffe3b0;
+            margin-bottom: 12px;
+        }
+        footer ul {
+            list-style: none;
+        }
+        footer li {
+            margin-bottom: 8px;
+        }
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #2d6e6a;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-emoji {
+                justify-content: center;
+            }
+            .header-inner {
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .logo {
+                flex-direction: column;
+            }
+            nav ul {
+                gap: 2px;
+            }
+            nav a {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .logo h1 {
+                font-size: 1.6rem;
+            }
+            .logo span {
+                font-size: 0.75rem;
+            }
+            .hero-text h2 {
+                font-size: 1.7rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .behaviour-grid {
+                grid-template-columns: 1fr 1fr;
+                padding: 20px 10px;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <div class="logo-icon">🐢</div>
+                    <div>
+                        <h1>傻傻的海龟</h1>
+                        <span>憨萌外表 · 海洋灵魂</span>
+                    </div>
+                </div>
+                <div class="header-motto">🌊 慢慢游，但游过了千万里</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#species">海龟图鉴</a></li>
+                    <li><a href="#behavior">傻傻日常</a></li>
+                    <li><a href="#protect">保护行动</a></li>
+                    <li><a href="#faq">常见疑问</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h2>它们看起来<em>傻傻的</em>，<br>却是海洋里最执着的旅人</h2>
+                    <p>“傻傻的海龟”不是一句嘲笑，而是对它们憨厚表情、缓慢动作和迷之方向感的亲昵称呼。这些在地球上生存了上亿年的精灵，其实藏着许多让人惊讶的智慧与秘密。</p>
+                    <div class="hero-emoji">
+                        <span>🐢 呆萌</span>
+                        <span>🧭 迷路大师</span>
+                        <span>🌿 吃素也吃荤</span>
+                        <span>💤 海底睡觉</span>
+                    </div>
+                </div>
+                <div class="hero-img" role="img" aria-label="一只呆萌海龟的插画"></div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section id="species">
+                <h2 class="section-title">🐢 海龟图鉴：不只是“傻傻的”</h2>
+                <p class="section-sub">全世界现存7种海龟，每一种都有自己的“傻萌”特点。来看看这些海洋老前辈的档案吧！</p>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-emoji">🌿💚</div>
+                        <h3>绿海龟</h3>
+                        <p>最著名的“傻白甜”，小时候吃肉长大吃素。喜欢在海底啃海草，一脸认真。因为脂肪呈绿色而得名，但壳其实是褐色或橄榄色。</p>
+                        <span class="tag">常见指数 ★★★★★</span>
+                    </article>
+                    <article class="card">
+                        <div class="card-emoji">🔶👄</div>
+                        <h3>玳瑁</h3>
+                        <p>拥有鹰嘴般的喙和华丽斑纹，最爱吃海绵。虽然长相有点“呆”，但其实是珊瑚礁的守护者。注意：玳瑁是国家一级保护动物。</p>
+                        <span class="tag">颜值担当 ★★★★☆</span>
+                    </article>
+                    <article class="card">
+                        <div class="card-emoji">🟫🛡️</div>
+                        <h3>蠵龟</h3>
+                        <p>大头、大颚、大红褐色的壳，看起来憨憨的。主要吃底栖动物，力气很大，是海龟中的“硬汉”。</p>
+                        <span class="tag">力量型 ★★★★☆</span>
+                    </article>
+                    <article class="card">
+                        <div class="card-emoji">⚫️💧</div>
+                        <h3>棱皮龟</h3>
+                        <p>海龟里的巨无霸，壳不是硬壳而是革质皮肤。看起来像一块漂流的黑石头，但是能潜水到1200米深处！</p>
+                        <span class="tag">潜水冠军 ★★★★★</span>
+                    </article>
+                    <article class="card">
+                        <div class="card-emoji">⚪️🌊</div>
+                        <h3>肯氏丽龟</h3>
+                        <p>主要分布在墨西哥湾，喜欢成群结队上岸产卵，场面壮观。个头不大，但数量众多时像一支“傻萌军队”。</p>
+                        <span class="tag">群居明星 ★★★☆☆</span>
+                    </article>
+                    <article class="card">
+                        <div class="card-emoji">🟢📏</div>
+                        <h3>太平洋丽龟</h3>
+                        <p>体型最小的海龟之一，壳近乎圆形，看起来像一片会游泳的叶子。常在印度洋和太平洋温暖水域出没。</p>
+                        <span class="tag">迷你可爱 ★★★★☆</span>
+                    </article>
+                </div>
+            </section>
+
+            <section id="behavior">
+                <h2 class="section-title">🧠 傻傻的日常，其实很有智慧</h2>
+                <div class="behaviour-grid">
+                    <div class="behaviour-item">
+                        <div class="icon">🧭</div>
+                        <h3>方向感之谜</h3>
+                        <p>海龟会利用地球磁场导航，但偶尔也会被洋流带偏。有时“傻傻地”游错方向，但它们总能慢慢修正路线。</p>
+                    </div>
+                    <div class="behaviour-item">
+                        <div class="icon">😴</div>
+                        <h3>海底睡觉</h3>
+                        <p>海龟可以在水下睡觉，一次憋气数小时。它们会躲在礁石缝或海草床里，看起来像一块“发呆的石头”。</p>
+                    </div>
+                    <div class="behaviour-item">
+                        <div class="icon">🍽️</div>
+                        <h3>吃货属性</h3>
+                        <p>有的海龟吃水母，有的啃海绵，有的吃海草。偶尔会把塑料袋当成水母吞下去，这也是它们“傻”得让人心疼的地方。</p>
+                    </div>
+                    <div class="behaviour-item">
+                        <div class="icon">🏖️</div>
+                        <h3>千里回乡</h3>
+                        <p>雌海龟会回到自己出生的沙滩产卵。它们凭记忆和磁场找到故乡，这种执着一点不“傻”，反而令人敬佩。</p>
+                    </div>
+                </div>
+                <div class="big-emoji-line">🐢 🐢 🐢 🐢 🐢</div>
+            </section>
+
+            <section id="protect">
+                <h2 class="section-title">🛡️ 别让“傻傻的它们”消失</h2>
+                <div class="protect-box">
+                    <h3>我们能做的小事</h3>
+                    <ul>
+                        <li><strong>减少塑料使用</strong>：塑料袋和吸管可能被海龟误食，用环保袋代替塑料袋。</li>
+                        <li><strong>不购买海龟制品</strong>：玳瑁壳、海龟蛋都是非法商品，拒绝买卖就是保护。</li>
+                        <li><strong>海滩不惊扰</strong>：如果看到海龟产卵或小海龟孵化，保持距离、不要用灯光照射。</li>
+                        <li><strong>关注海洋保护组织</strong>：支持正规的科研与救助机构，了解海龟救助知识。</li>
+                        <li><strong>随手捡起海滩垃圾</strong>：尤其注意废弃渔网，海龟容易被缠绕。</li>
+                    </ul>
+                    <p style="opacity:0.9;">💡 海龟已经生存了约1亿年，但近百年它们的数量急剧下降。每一份关注都是希望。</p>
+                </div>
+            </section>
+
+            <section id="faq">
+                <h2 class="section-title">❓ 关于“傻傻的海龟”的常见疑问</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>海龟真的“傻”吗？</h3>
+                        <p>这只是人们对它们呆萌外表的昵称。实际上海龟能进行长途导航、记住出生地，还有复杂的社会行为。它们只是动作慢、表情萌，并不傻。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>海龟和陆龟有什么区别？</h3>
+                        <p>海龟的脚像船桨，不能缩回头；陆龟的脚有脚趾，能缩壳。海龟除了产卵外一生几乎都在海里，而陆龟完全生活在陆地上。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>海龟吃什么？</h3>
+                        <p>不同种类食性不同。绿海龟吃海草和藻类，玳瑁吃海绵，蠵龟吃贝类和螃蟹，棱皮龟主要吃水母。它们都是机会主义吃货。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>为什么小海龟要往海里爬？</h3>
+                        <p>刚孵化的小海龟会本能地朝最亮的方向爬，通常是海面反射的月光。但人造灯光会干扰它们，导致它们迷路。这也是“傻傻”的悲剧来源。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>海龟能活多久？</h3>
+                        <p>海龟的寿命很长，一般可达50年以上，有些个体甚至能活到80-100岁。它们的生长速度很慢，成熟也晚。</p>
+                    </div>
+                </div>
+            </section>
+
+            <aside style="background: #d6f0ec; border-radius: 24px; padding: 20px 25px; margin: 30px 0; border: 1px solid #8cc7c0;">
+                <h3 style="color: #0b5e5b; margin-bottom: 10px;">🐢 关于本站</h3>
+                <p style="color: #155e59;">“傻傻的海龟”是一群热爱海洋生物的人建立的科普小站。我们相信，用轻松有趣的方式了解海龟，能让大家更愿意保护它们。本站内容基于公开科学资料整理，若有错误欢迎指正。</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h4>🐢 傻傻的海龟</h4>
+                    <p>一个关于海龟的趣味知识角落。不端着、不枯燥，用“傻萌”视角认识海洋里的老前辈。希望你喜欢这些慢慢悠悠的大家伙。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#home">回到顶部</a></li>
+                        <li><a href="#species">海龟图鉴</a></li>
+                        <li><a href="#behavior">海龟行为</a></li>
+                        <li><a href="#protect">保护海龟</a></li>
+                        <li><a href="#faq">常见疑问</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 傻傻的海龟 · 用心科普，拒绝骚扰。 本站为概念展示页，无商业用途。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
